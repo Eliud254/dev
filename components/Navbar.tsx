@@ -6,7 +6,7 @@ const Navbar: React.FC = () => (
   <AppBar position="static" color="transparent" elevation={0}>
     <Toolbar>
       <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-        Your Name
+        Eliud
       </Typography>
       <Box>
         <Link href="/" passHref>
