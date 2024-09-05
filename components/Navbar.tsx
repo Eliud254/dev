@@ -8,7 +8,6 @@ const Logo = styled(Typography)({
   fontWeight: 'bold',
   fontSize: '1.8rem',
   color: '#ffffff',
-  flexGrow: 1,
 });
 
 const NavLink = styled(Button)({
@@ -16,103 +15,96 @@ const NavLink = styled(Button)({
   marginRight: '20px',
   textTransform: 'none',
   fontSize: '1rem',
-  '&:last-of-type': {
-    marginRight: 0,
-  },
   '&:hover': {
     color: '#ffffff',
     textShadow: '0px 0px 10px rgba(255, 255, 255, 0.9)',
   },
 });
 
-const Navbar: React.FC = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+const Navbar = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  const toggleDrawer = (open: boolean) => () => {
-    setDrawerOpen(open);
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
   };
 
-  return (
-    <AppBar 
-      position="fixed" 
-      style={{ 
-        top: 0,
-        left: 0,
-        right: 0,
-        backgroundColor: 'transparent', 
-        padding: '10px 20px',
-        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.5)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-        zIndex: 1300,
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-      }}
-    >
-      <Toolbar style={{ width: '100%', display: 'flex', alignItems: 'center' }}>
-        <Logo>Eliud</Logo>
-        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-          <Link href="/" passHref>
-            <NavLink>Home</NavLink>
-          </Link>
-          <Link href="/about" passHref>
-            <NavLink>About</NavLink>
-          </Link>
-          <Link href="/portfolio" passHref>
-            <NavLink>Portfolio</NavLink>
-          </Link>
-          <Link href="/contact" passHref>
-            <NavLink>Contact</NavLink>
-          </Link>
-        </Box>
-        <IconButton
-          edge="end"
-          color="inherit"
-          aria-label="menu"
-          sx={{ display: { xs: 'block', md: 'none' } }}
-          onClick={toggleDrawer(true)}
-        >
-          <MenuIcon />
-        </IconButton>
-      </Toolbar>
+  const menuItems = [
+    { text: 'Home', href: '/' },
+    { text: 'About', href: '/about' },
+    { text: 'Portfolio', href: '/portfolio' },
+    { text: 'Contact', href: '/contact' },
+  ];
 
-      <Drawer
-        anchor="right"
-        open={drawerOpen}
-        onClose={toggleDrawer(false)}
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', paddingTop: '80px' }}>
+      <List>
+        {menuItems.map((item) => (
+          <ListItem key={item.text} disablePadding>
+            <Link href={item.href} passHref style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
+              <ListItemText primary={item.text} sx={{ textAlign: 'center', py: 1 }} />
+            </Link>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
+  return (
+    <>
+      <AppBar
+        position="fixed"
+        sx={{
+          top: 0,
+          left: 0,
+          right: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)', // Slightly transparent black
+          padding: '10px 0',
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.5)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+          zIndex: 1300,
+        }}
       >
-        <Box
-          sx={{ width: 250 }}
-          role="presentation"
-          onClick={toggleDrawer(false)}
-          onKeyDown={toggleDrawer(false)}
+        <Toolbar sx={{ justifyContent: 'space-between' }}>
+          <Logo>Eliud</Logo>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {menuItems.map((item) => (
+              <Link key={item.text} href={item.href} passHref>
+                <NavLink>{item.text}</NavLink>
+              </Link>
+            ))}
+          </Box>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <Box component="nav">
+        <Drawer
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': { 
+              boxSizing: 'border-box', 
+              width: 240, 
+              backgroundColor: 'rgba(0, 0, 0, 0.9)', // Dark background for drawer
+            },
+          }}
         >
-          <List>
-            <ListItem button>
-              <Link href="/" passHref>
-                <ListItemText primary="Home" />
-              </Link>
-            </ListItem>
-            <ListItem button>
-              <Link href="/about" passHref>
-                <ListItemText primary="About" />
-              </Link>
-            </ListItem>
-            <ListItem button>
-              <Link href="/portfolio" passHref>
-                <ListItemText primary="Portfolio" />
-              </Link>
-            </ListItem>
-            <ListItem button>
-              <Link href="/contact" passHref>
-                <ListItemText primary="Contact" />
-              </Link>
-            </ListItem>
-          </List>
-        </Box>
-      </Drawer>
-    </AppBar>
+          {drawer}
+        </Drawer>
+      </Box>
+    </>
   );
 };
 

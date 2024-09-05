@@ -1,89 +1,111 @@
 import React from 'react';
-import { Typography, Box, Grid, Card, CardContent, CardMedia, CardActions, Button } from '@mui/material';
+import { Typography, Box, Grid, Card, CardContent, CardMedia, CardActions, Button, useTheme, useMediaQuery } from '@mui/material';
 
 const projects = [
   {
     title: 'Witz Africa',    
-    description: 'Html, Css, JavaScript, Node,Express,MongoDB,Mongoose',
+    description: 'Html, Css, JavaScript, Node, Express, MongoDB, Mongoose',
     image: './landingPage.jpg',
     link: 'https://github.com/Eliud254/witz-Africa',
   },
   {
-    title: 'pantry_tracker_App ',
-    description: 'Next js, Material UI,React ,Firebase, Node,CI/CD,OpenAi',
+    title: 'Pantry Tracker App',
+    description: 'Next.js, Material UI, React, Firebase, Node, CI/CD, OpenAI',
     image: '/pantry_tracker.jpg',
     link: 'https://pantrytracker2024.vercel.app/',
   },
   {
-    title: 'AI Customer Support ',
-    description: 'Nextjs,React, Material UI,Firebase,Node,Express Open Ai,Pincone',
+    title: 'AI Customer Support',
+    description: 'Next.js, React, Material UI, Firebase, Node, Express, OpenAI, Pinecone',
     image: '/Ai_support.jpg',
     link: 'https://ai-support-bot.vercel.app/',
   },
-
   {
     title: 'AI Flashcards & Stripe',
-    description: 'Nextjs,React,Material UI,Firebase,Clerk,Node,Express,Stripe,Open AI,Clerk',
+    description: 'Next.js, React, Material UI, Firebase, Clerk, Node, Express, Stripe, OpenAI',
     image: '/flashcard.jpg',
     link: 'https://flashcards-zeta-ten.vercel.app/',
   },
-
   {
     title: 'AI Rate My Professor',
-    description: 'React,Material UI, Nextjs,Clerk,Open AI,TypeScript,Node,Express,Pincone ,MongoDB',
+    description: 'React, Material UI, Next.js, Clerk, OpenAI, TypeScript, Node, Express, Pinecone, MongoDB',
     image: '/professor.jpg',
     link: 'https://rate-my-professor-rag-five.vercel.app/',
   },
-
   {
     title: 'Rilla-voice_ai',
-    description: 'React,Nextjs,Typescript,Material UI,Python,Node,Express,MongonDB,OpenAI',
+    description: 'React, Next.js, TypeScript, Material UI, Python, Node, Express, MongoDB, OpenAI',
     image: '/rilla.jpg',
     link: 'https://rilla-voice-ai.vercel.app/',
   },
-  
   {
-  title: 'Meal planner AI',
+    title: 'Meal planner AI',
     description: 'Coming Soon',
-    image:'./meal.jpg',
+    image: './meal.jpg',
     link: '',
   },
-  // Add more projects as needed
 ];
 
-const Portfolio: React.FC = () => (
-  <Box>
-    <Typography variant="h3" component="h1" gutterBottom>
-      My Projects
-    </Typography>
-    <Grid container spacing={4}>
-      {projects.map((project, index) => (
-        <Grid item xs={12} sm={6} md={4} key={index}>
-          <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <CardMedia
-              component="img"
-              height="140"
-              image={project.image}
-              alt={project.title}
-            />
-            <CardContent sx={{ flexGrow: 1 }}>
-              <Typography gutterBottom variant="h5" component="h2">
-                {project.title}
-              </Typography>
-              <Typography>
-                {project.description}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small" href={project.link} target="_blank" rel="noopener noreferrer">
-                View Project
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
-  </Box>
-);
+const Portfolio: React.FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  return (
+    <Box sx={{ padding: isMobile ? 2 : 4 }}>
+      <Typography variant={isMobile ? "h4" : "h3"} component="h1" gutterBottom sx={{ textAlign: 'center', mb: 4 }}>
+        My Projects
+      </Typography>
+      <Grid container spacing={isMobile ? 2 : 4}>
+        {projects.map((project, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card sx={{ 
+              height: '100%', 
+              display: 'flex', 
+              flexDirection: 'column',
+              transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+              '&:hover': {
+                transform: 'scale(1.03)',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.12)',
+              }
+            }}>
+              <CardMedia
+                component="img"
+                height={isMobile ? "120" : "140"}
+                image={project.image}
+                alt={project.title}
+                sx={{ objectFit: 'cover' }}
+              />
+              <CardContent sx={{ flexGrow: 1 }}>
+                <Typography gutterBottom variant={isMobile ? "h6" : "h5"} component="h2">
+                  {project.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {project.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button 
+                  size="small" 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  disabled={!project.link}
+                  sx={{
+                    color: theme.palette.primary.main,
+                    '&:hover': {
+                      backgroundColor: 'rgba(0, 0, 0, 0.04)',
+                    },
+                  }}
+                >
+                  {project.link ? 'View Project' : 'Coming Soon'}
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  );
+};
 
 export default Portfolio;
