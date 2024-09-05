@@ -44,7 +44,7 @@ const Footer: React.FC = () => (
         </Button>
       </Box>
       <Typography variant="body2" color="text.secondary" align="center">
-        © {new Date().getFullYear()} Your Name. All rights reserved.
+        © {new Date().getFullYear()} Eliud Obure. All rights reserved.
       </Typography>
     </Container>
   </Box>

@@ -3,16 +3,50 @@ import { Typography, Box, Grid, Card, CardContent, CardMedia, CardActions, Butto
 
 const projects = [
   {
-    title: 'Project 1',
-    description: 'A brief description of project 1',
-    image: '/placeholder-image-1.jpg',
-    link: 'https://project1.com',
+    title: 'Witz Africa',    
+    description: 'Html, Css, JavaScript, Node,Express,MongoDB,Mongoose',
+    image: './landingPage.jpg',
+    link: 'https://github.com/Eliud254/witz-Africa',
   },
   {
-    title: 'Project 2',
-    description: 'A brief description of project 2',
-    image: '/placeholder-image-2.jpg',
-    link: 'https://project2.com',
+    title: 'pantry_tracker_App ',
+    description: 'Next js, Material UI,React ,Firebase, Node,CI/CD,OpenAi',
+    image: '/pantry_tracker.jpg',
+    link: 'https://pantrytracker2024.vercel.app/',
+  },
+  {
+    title: 'AI Customer Support ',
+    description: 'Nextjs,React, Material UI,Firebase,Node,Express Open Ai,Pincone',
+    image: '/Ai_support.jpg',
+    link: 'https://ai-support-bot.vercel.app/',
+  },
+
+  {
+    title: 'AI Flashcards & Stripe',
+    description: 'Nextjs,React,Material UI,Firebase,Clerk,Node,Express,Stripe,Open AI,Clerk',
+    image: '/flashcard.jpg',
+    link: 'https://flashcards-zeta-ten.vercel.app/',
+  },
+
+  {
+    title: 'AI Rate My Professor',
+    description: 'React,Material UI, Nextjs,Clerk,Open AI,TypeScript,Node,Express,Pincone ,MongoDB',
+    image: '/professor.jpg',
+    link: 'https://rate-my-professor-rag-five.vercel.app/',
+  },
+
+  {
+    title: 'Rilla-voice_ai',
+    description: 'React,Nextjs,Typescript,Material UI,Python,Node,Express,MongonDB,OpenAI',
+    image: '/rilla.jpg',
+    link: 'https://rilla-voice-ai.vercel.app/',
+  },
+  
+  {
+  title: 'Meal planner AI',
+    description: 'Coming Soon',
+    image:'./meal.jpg',
+    link: '',
   },
   // Add more projects as needed
 ];
