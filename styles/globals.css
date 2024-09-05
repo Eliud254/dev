@@ -1,9 +1,12 @@
+/* global.css */
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* Add padding-top to avoid content being hidden behind the fixed navbar */
+  padding-top: 60px; /* Adjust this value to match the height of your navbar */
 }
 
 a {
