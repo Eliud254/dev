@@ -47,7 +47,7 @@ const HeroButton = styled(Button)({
 
 const Home: React.FC = () => (
   <HeroSection>
-    <HeroText variant="h1">Hi, I'm Eliud</HeroText>
+    <HeroText variant="h1">Hi, I&apos;m Eliud</HeroText>
     <SubText variant="h6">Passionate and experienced software engineer specializing in building innovative solutions that solve real-world problems</SubText>
     <HeroButton component={Link} href="/portfolio">View My Work</HeroButton>
   </HeroSection>
