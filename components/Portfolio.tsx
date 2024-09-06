@@ -20,12 +20,7 @@ const projects = [
     image: '/Ai_support.jpg',
     link: 'https://ai-support-bot.vercel.app/',
   },
-  {
-    title: 'AI Flashcards & Stripe',
-    description: 'Next.js, React, Material UI, Firebase, Clerk, Node, Express, Stripe, OpenAI',
-    image: '/flashcard.jpg',
-    link: 'https://flashcards-zeta-ten.vercel.app/',
-  },
+  
   {
     title: 'AI Rate My Professor',
     description: 'React, Material UI, Next.js, Clerk, OpenAI, TypeScript, Node, Express, Pinecone, MongoDB',
