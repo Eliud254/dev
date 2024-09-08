@@ -10,26 +10,26 @@ const projects = [
   },
   {
     title: 'Pantry Tracker App',
-    description: 'Next.js, Material UI, React, Firebase, Node, CI/CD, OpenAI',
+    description: 'Next.js, Material UI, React,React Camera Pro, Firebase,Python,TensorFlow, OpenAI API,',
     image: '/pantry_tracker.jpg',
-    link: 'https://pantrytracker2024.vercel.app/',
+    link: 'https://ai-pantry-tracker.vercel.app/',
   },
   {
     title: 'AI Customer Support',
-    description: 'Next.js, React, Material UI, Firebase, Node, Express, OpenAI, Pinecone',
+    description: 'Next.js, React, Material UI,MongoDb, Node, Express, OpenAI ,AWS',
     image: '/Ai_support.jpg',
     link: 'https://ai-support-bot.vercel.app/',
   },
   
   {
     title: 'AI Rate My Professor',
-    description: 'React, Material UI, Next.js, Clerk, OpenAI, TypeScript, Node, Express, Pinecone, MongoDB',
+    description: 'React, Material UI, Next.js, Clerk, OpenAI, Node, Express,Firebase',
     image: '/professor.jpg',
     link: 'https://rate-my-professor-rag-five.vercel.app/',
   },
   {
     title: 'Rilla-voice_ai',
-    description: 'React, Next.js, TypeScript, Material UI, Python, Node, Express, MongoDB, OpenAI',
+    description: 'React, Next.js, TypeScript, Material UI, Python,Firebase, OpenAI',
     image: '/rilla.jpg',
     link: 'https://rilla-voice-ai.vercel.app/',
   },
