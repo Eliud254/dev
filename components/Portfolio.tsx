@@ -33,11 +33,18 @@ const projects = [
     image: '/rilla.jpg',
     link: 'https://rilla-voice-ai.vercel.app/',
   },
+
+  {
+    title: 'Lio,Task Management App',
+    description: 'Javascript ,Html,Css,Firebase',
+    image: '/lio.jpg',
+    link: 'https://github.com/Eliud254/Lio.git',
+  },
   {
     title: 'Meal planner AI',
     description: 'Coming Soon',
     image: './meal.jpg',
-    link: '',
+    link: 'https://github.com/Eliud254/AI-Meal-Planner',
   },
 ];
 
