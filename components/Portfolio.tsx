@@ -40,6 +40,14 @@ const projects = [
     image: '/lio.jpg',
     link: 'https://github.com/Eliud254/Lio.git',
   },
+  
+  {
+    title: 'Netflix Clone',
+    description: 'Next.js, React, Material UI,Firebase, Node, Express,AWS',
+    image: '/netflix.jpg',
+    link: 'https://www.lescerveauxai.app/'
+  },
+  
   {
     title: 'Meal planner AI',
     description: 'Coming Soon',
