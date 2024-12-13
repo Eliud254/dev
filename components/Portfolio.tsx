@@ -36,7 +36,7 @@ const projects = [
 
   {
     title: 'Online Compiler',
-    description: 'React ,Next Js, Convex ,Tailwind CSS',
+    description: 'React ,Next Js,TypeScript Convex ,Tailwind CSS',
     image: '/compiler.jpg',
     link: 'https://github.com/Eliud254/compiler',
   },
