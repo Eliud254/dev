@@ -3,10 +3,22 @@ import { Typography, Box, Grid, Card, CardContent, CardMedia, CardActions, Butto
 
 const projects = [
   {
-    title: 'Witz Africa',    
-    description: 'Html, Css, JavaScript, Node, Express, MongoDB, Mongoose',
-    image: './landingPage.jpg',
-    link: 'https://github.com/Eliud254/witz-Africa',
+    title: 'Netflix Clone',
+    description: 'Next.js, React, Material UI,Firebase, Node, Express,AWS',
+    image: '/netflix.jpg',
+    link: 'https://www.lescerveauxai.app/'
+  },
+  {
+    title: 'AirBnb Clone',
+    description: 'Python,MySql, Flask Html',
+    image: './airbnb.jpg',
+    link: 'https://github.com/Eliud254/AirBnB_clone',
+  },
+  {
+    title: '  Finance Dashboard',
+    description: 'TypeScript, React, Material UI, Node, Express',
+    image: '/finance.jpg',
+    link: 'https://github.com/Eliud254/Dashboard_Finance'
   },
   {
     title: 'Pantry Tracker App',
@@ -20,7 +32,6 @@ const projects = [
     image: '/Ai_support.jpg',
     link: 'https://ai-support-bot.vercel.app/',
   },
-  
   {
     title: 'AI Rate My Professor',
     description: 'React, Material UI, Next.js, Clerk, OpenAI, Node, Express,Firebase',
@@ -28,31 +39,22 @@ const projects = [
     link: 'https://rate-my-professor-rag-five.vercel.app/',
   },
   {
+    title: 'Witz Africa',    
+    description: 'Html, Css, JavaScript, Node, Express, MongoDB, Mongoose',
+    image: './landingPage.jpg',
+    link: 'https://github.com/Eliud254/witz-Africa',
+  },
+  {
     title: 'Rilla-voice_ai',
     description: 'React, Next.js, TypeScript, Material UI, Python,Firebase, OpenAI',
     image: '/rilla.jpg',
     link: 'https://rilla-voice-ai.vercel.app/',
   },
-
   {
     title: 'Online Compiler',
     description: 'React ,Next Js,TypeScript Convex ,Tailwind CSS',
     image: '/compiler.jpg',
     link: 'https://github.com/Eliud254/compiler',
-  },
-  
-  {
-    title: 'Netflix Clone',
-    description: 'Next.js, React, Material UI,Firebase, Node, Express,AWS',
-    image: '/netflix.jpg',
-    link: 'https://www.lescerveauxai.app/'
-  },
-  
-  {
-    title: 'AirBnb Clone',
-    description: 'Python,MySql, Flask Html',
-    image: './airbnb.jpg',
-    link: 'https://github.com/Eliud254/AirBnB_clone',
   },
 ];
 
