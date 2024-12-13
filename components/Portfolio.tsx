@@ -35,10 +35,10 @@ const projects = [
   },
 
   {
-    title: 'Lio,Task Management App',
-    description: 'Javascript ,Html,Css,Firebase',
-    image: '/lio.jpg',
-    link: 'https://github.com/Eliud254/Lio.git',
+    title: 'Online Compiler',
+    description: 'React ,Next Js, Convex ,Tailwind CSS',
+    image: '/compiler.jpg',
+    link: 'https://github.com/Eliud254/compiler',
   },
   
   {
@@ -49,10 +49,10 @@ const projects = [
   },
   
   {
-    title: 'Meal planner AI',
-    description: 'Coming Soon',
-    image: './meal.jpg',
-    link: 'https://github.com/Eliud254/AI-Meal-Planner',
+    title: 'AirBnb Clone',
+    description: 'Python,MysQL, Flask Html',
+    image: './airbnb.jpg',
+    link: 'https://github.com/Eliud254/AirBnB_clone',
   },
 ];
 
