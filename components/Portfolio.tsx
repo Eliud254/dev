@@ -50,7 +50,7 @@ const projects = [
   
   {
     title: 'AirBnb Clone',
-    description: 'Python,MysQL, Flask Html',
+    description: 'Python,MySql, Flask Html',
     image: './airbnb.jpg',
     link: 'https://github.com/Eliud254/AirBnB_clone',
   },
