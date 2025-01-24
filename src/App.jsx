@@ -51,17 +51,6 @@ const projectsData = [
     image: "rateprof.jpg"
 
   },
-
-  {
-    id: 6,
-    title: "School Website",
-    description: "An AI-driven platform that empowers students with smart, data-backed professor ratings",
-    technologies: ["Javascript", "React", "Next","Python", "MongoDB","Open API"],
-    link: "https://rate-my-professor-rag-five.vercel.app/",
-    image: "rateprof.jpg"
-
-  },
-  
 ];
 
 const technologiesData = [
