@@ -40,7 +40,7 @@ export const Navbar = ({ scrollToSection, homeRef, projectsRef, technologiesRef,
                         <button onClick={() => handleNavigation(projectsRef)} className="block px-3 py-2 text-gray-600 hover:text-blue-600">Projects</button>
                         <button onClick={() => handleNavigation(technologiesRef)} className="block px-3 py-2 text-gray-600 hover:text-blue-600">Technologies</button>
                         <button onClick={() => handleNavigation(contactRef)} className="block px-3 py-2 text-gray-600 hover:text-blue-600">Contact</button>
-                    </div>
+                    </div>in
                 </div>
             )}
         </nav>
