@@ -51,6 +51,26 @@ const projectsData = [
     image: "rateprof.jpg"
 
   },
+
+  {
+    id: 6,
+    title: "Silicon Scribe",
+    description: "Silicon Scribe empowers African startups through hackathons, pitch deck writing, and MVP development, accelerating product launches.",
+    technologies: ["TypeScript", "React", "Tailwind"],
+    link: "https://siliconscribe.vercel.app/",
+    image: "silicon.jpg"
+
+  },
+
+  {
+    id: 7,
+    title: "Simple Shell Project",
+    description: "Simple Shell is a Unix command-line interpreter that executes commands and manages processes.",
+    technologies: ["C", "Shell", "Linux"],
+    link: "https://github.com/Eliud254/simple_shell",
+    image: "simpleshell.jpg"
+
+  },
 ];
 
 const technologiesData = [
@@ -59,6 +79,7 @@ const technologiesData = [
     { category: "Frontend", name: "Tailwind CSS", image: "/tailwindcss.svg" },
     { category: "Backend", name: "Node.js", image: "/nodejs.svg" },
     { category: "Backend", name: "Python", image: "/python.svg" },
+    { category: "Backend", name: "Go", image: "/express.svg" },
     { category: "Backend", name: "Django", image: "/django.svg" },
     { category: "Database", name: "PostgreSQL", image: "/postgresql.svg" },
     { category: "Database", name: "MongoDB", image: "/mongodb.svg" },
