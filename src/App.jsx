@@ -67,7 +67,7 @@ const projectsData = [
     title: "E-commerece",
     description: "E-commerce platform with a wide range of products and services",
     technologies: ["Wordpress", "PHP", "MySQL"],
-    link: "https://meticsfashion.co",
+    link: "https://meticsfashion.com",
     image: "wordpress.jpg"
 
   },
