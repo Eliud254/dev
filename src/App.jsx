@@ -64,15 +64,25 @@ const projectsData = [
 
   {
     id: 7,
-    title: "Simple Shell Project",
-    description: "Simple Shell is a Unix command-line interpreter that executes commands and manages processes.",
-    technologies: ["C", "Shell", "Linux"],
-    link: "https://github.com/Eliud254/simple_shell",
-    image: "simpleshell.jpg"
+    title: "E-commerece",
+    description: "E-commerce platform with a wide range of products and services",
+    technologies: ["Wordpress", "PHP", "MySQL"],
+    link: "https://meticsfashion.co",
+    image: "wordpress.jpg"
 
   },
-];
 
+  {
+    id: 7,
+    title: "Modern Portfolio",
+    description: "A modern portfolio website with a clean and responsive design",
+    technologies: ["Wordpress", "PHP", "MySQL"],
+    link: "https://wearecosmico.com/",
+    image: "cosmos.jpg"
+
+  },
+ 
+];
 const technologiesData = [
     { category: "Frontend", name: "JavaScript", image: "/javascript.svg" },
     { category: "Frontend", name: "React", image: "/react.svg" },
