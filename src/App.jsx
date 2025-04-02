@@ -63,24 +63,16 @@ const projectsData = [
   },
 
   {
-    id: 7,
-    title: "E-commerece",
-    description: "E-commerce platform with a wide range of products and services",
-    technologies: ["Wordpress", "PHP", "MySQL"],
-    link: "https://meticsfashion.com",
-    image: "wordpress.jpg"
+    id: 6,
+    title: "Go Digital Africa",
+    description: "Go Digital Africa is a digital marketing company that provides businesses with innovative solutions to enhance their online presence and drive growth.",
+    technologies: ["JavaScript", "React", "Tailwind", "Python", "MySQL"],
+    link: "https://godigital-africa.web.app/",
+    image: "godigital.jpg"
 
   },
 
-  {
-    id: 7,
-    title: "Modern Portfolio",
-    description: "A modern portfolio website with a clean and responsive design",
-    technologies: ["Wordpress", "PHP", "MySQL"],
-    link: "https://wearecosmico.com/",
-    image: "cosmos.jpg"
 
-  },
  
 ];
 const technologiesData = [
