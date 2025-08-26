@@ -9,6 +9,30 @@ import { Footer } from './components/Footer';
 const projectsData = [
     {
         id: 1,
+        title: "Linkly",
+        description: "A comprehensive social media automation platform that manages multiple social media pages by scheduling posts and automating content distribution across various platforms.",
+        technologies: ["React", "Next.js", "TypeScript", "Python", "OpenAI", "MongoDB"],
+        link: "https://www.linkly.africa/",
+        image: "/wordpress.jpg"
+    },
+    {
+        id: 2,
+        title: "Optrise",
+        description: "An advanced SEO analyzer platform that scans websites to identify broken links, SEO issues, and optimization opportunities for comprehensive website analysis and improvement.",
+        technologies: ["React", "Next.js", "TypeScript", "Express", "Node.js", "PostgreSQL"],
+        link: "https://optrise-africa.vercel.app/",
+        image: "/optrise.jpg"
+    },
+    {
+        id: 3,
+        title: "SmartWound",
+        description: "A telemedicine platform that analyzes wound and disease photos using AI to provide accurate medical assessments and treatment recommendations.",
+        technologies: ["React", "Next.js", "TypeScript", "Node.js", "Express", "OpenAI", "PostgreSQL"],
+        link: "https://smartowund.vercel.app/",
+        image: "/smartwound.jpg"
+    },
+    {
+        id: 4,
         title: "Rilla-voice_ai",
         description: "Rilla Voice AI transforms audio into text and PDFs into voice.",
         technologies: ["React","Next","Tailwind CSS", "Python","Firebase"],
@@ -16,64 +40,21 @@ const projectsData = [
         image: "/rillov.jpg"
     },
     {
-        id: 2,
-        title: "AirBnB Clone",
-        description: "A Django-based solution leveraging search algorithms to simplify property rentals, enabling seamless listing, booking, and discovery.",
-        technologies: ["Python", "Django", "MySQL","RestAPI"],
-        link: "https://github.com/Eliud254/AirBnB_clone",
-        image: "/airbnbclone.jpg"
+        id: 5,
+        title: "AI Rate My Professor",
+        description: "An AI-driven platform that empowers students with smart, data-backed professor ratings",
+        technologies: ["Javascript", "React", "Next","Python", "MongoDB","Open API"],
+        link: "https://rate-my-professor-rag-five.vercel.app/",
+        image: "rateprof.jpg"
     },
     {
-        id: 3,
-        title: "TrendLens",
-        description: "An AI-powered tool using machine learning and NLP algorithms to predict video success by analyzing trends and audience engagement.",
-        technologies: ["JavaScript", "React", "Tailwind","Python", "MongoDB","RestAPI"],
-        link: "https://github.com/Eliud254/TrendLens",
-        image: "trendlens.jpg"
-    },
-
-  {
-    id: 4,
-    title: "Online Compiler",
-    description: "A versatile online IDE supporting 10 languages with customizable themes, smart output handling",
-    technologies: ["Typescript","Next", "Tailwind","Convex",],
-    link: "https://github.com/Eliud254/compiler",
-    image: "compiler.jpg"
-
-  },
-
-  {
-    id: 5,
-    title: "AI Rate My Professor",
-    description: "An AI-driven platform that empowers students with smart, data-backed professor ratings",
-    technologies: ["Javascript", "React", "Next","Python", "MongoDB","Open API"],
-    link: "https://rate-my-professor-rag-five.vercel.app/",
-    image: "rateprof.jpg"
-
-  },
-
-  {
-    id: 6,
-    title: "Silicon Scribe",
-    description: "Silicon Scribe empowers African startups through hackathons, pitch deck writing, and MVP development, accelerating product launches.",
-    technologies: ["TypeScript", "React", "Tailwind"],
-    link: "https://siliconscribe.vercel.app/",
-    image: "silicon.jpg"
-
-  },
-
-  {
-    id: 6,
-    title: "Go Digital Africa",
-    description: "Go Digital Africa is a digital marketing company that provides businesses with innovative solutions to enhance their online presence and drive growth.",
-    technologies: ["JavaScript", "React", "Tailwind", "Python", "MySQL"],
-    link: "https://godigital-africa.web.app/",
-    image: "godigital.jpg"
-
-  },
-
-
- 
+        id: 6,
+        title: "Go Digital Africa",
+        description: "Go Digital Africa is a digital marketing company that provides businesses with innovative solutions to enhance their online presence and drive growth.",
+        technologies: ["JavaScript", "React", "Tailwind", "Python", "MySQL"],
+        link: "https://godigital-africa.web.app/",
+        image: "godigital.jpg"
+    }
 ];
 const technologiesData = [
     { category: "Frontend", name: "JavaScript", image: "/javascript.svg" },
