@@ -18,10 +18,6 @@ export const Hero = () => {
              and efficient solutions to complex problems. Proven ability to design,
               develop, and deploy high-quality software applications.
             </p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md flex items-center hover:bg-blue-700">
-              Projects
-              <ChevronRight className="w-4 h-4 ml-2" />
-            </button>
           </div>
           <div className="md:w-1/2 flex justify-center">
             <div className="w-64 h-64 rounded-full bg-gray-200 overflow-hidden">
