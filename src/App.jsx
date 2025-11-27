@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { About } from './components/About';
 import { Projects } from './components/Projects';
 import { Technologies } from './components/Technologies';
 import { Footer } from './components/Footer';
@@ -9,69 +10,63 @@ import { Footer } from './components/Footer';
 const projectsData = [
     {
         id: 1,
-        title: "Linkly",
-        description: "A comprehensive social media automation platform that manages multiple social media pages by scheduling posts and automating content distribution across various platforms.",
-        technologies: ["React", "Next.js", "TypeScript", "Python", "OpenAI", "MongoDB"],
-        link: "https://www.linkly.africa/",
-        image: "/wordpress.jpg"
+        title: "Somalia Integrated Data Management System",
+        description: "A comprehensive data management platform for the Somalia National Bureau of Statistics. This system enables efficient data collection, processing, analysis, and reporting for national statistics, supporting evidence-based policy making and development planning.",
+        technologies: ["Python", "Django", "OpenAI", "PostgreSQL", "PostGIS", "Scrapy", "BeautifulSoup", "Leaflet", "React"],
+        link: "https://sidms.gov.so/",
+        image: "/somalia.jpg",
+        category: "Government & Data Systems"
     },
     {
         id: 2,
-        title: "Optrise",
-        description: "An advanced SEO analyzer platform that scans websites to identify broken links, SEO issues, and optimization opportunities for comprehensive website analysis and improvement.",
-        technologies: ["React", "Next.js", "TypeScript", "Express", "Node.js", "PostgreSQL"],
-        link: "https://optrise-africa.vercel.app/",
-        image: "/optrise.jpg"
+        title: "Linkly",
+        description: "A comprehensive social media automation platform that manages multiple social media pages by scheduling posts and automating content distribution across various platforms. Built to help businesses scale their social media presence efficiently.",
+        technologies: ["React", "Next.js", "TypeScript", "Python", "OpenAI", "MongoDB"],
+        link: "https://www.linkly.africa/",
+        image: "/linkly.jpg",
+        category: "AI & Automation"
     },
     {
         id: 3,
-        title: "SmartWound",
-        description: "A telemedicine platform that analyzes wound and disease photos using AI to provide accurate medical assessments and treatment recommendations.",
-        technologies: ["React", "Next.js", "TypeScript", "Node.js", "Express", "OpenAI", "PostgreSQL"],
-        link: "https://smartowund.vercel.app/",
-        image: "/smartwound.jpg"
+        title: "Optrise",
+        description: "An advanced SEO analyzer platform that scans websites to identify broken links, SEO issues, and optimization opportunities. Provides comprehensive website analysis and actionable insights for improvement.",
+        technologies: ["React", "Next.js", "TypeScript", "Express", "Node.js", "PostgreSQL"],
+        link: "https://optrise-africa.vercel.app/",
+        image: "/optrise.jpg",
+        category: "SEO & Analytics"
     },
     {
         id: 4,
-        title: "Rilla-voice_ai",
-        description: "Rilla Voice AI transforms audio into text and PDFs into voice.",
-        technologies: ["React","Next","Tailwind CSS", "Python","Firebase"],
-        link: "https://rilla-voice-ai.vercel.app/",
-        image: "/rillov.jpg"
+        title: "SmartWound",
+        description: "A telemedicine platform that analyzes wound and disease photos using AI to provide accurate medical assessments and treatment recommendations. Empowers healthcare providers with AI-driven diagnostics.",
+        technologies: ["React", "Next.js", "TypeScript", "Node.js", "Express", "OpenAI", "PostgreSQL"],
+        link: "https://smartowund.vercel.app/",
+        image: "/smartwound.jpg",
+        category: "AI & Automation"
     },
     {
         id: 5,
-        title: "AI Rate My Professor",
-        description: "An AI-driven platform that empowers students with smart, data-backed professor ratings",
-        technologies: ["Javascript", "React", "Next","Python", "MongoDB","Open API"],
-        link: "https://rate-my-professor-rag-five.vercel.app/",
-        image: "rateprof.jpg"
+        title: "Rilla Voice AI",
+        description: "An intelligent voice AI platform that transforms audio into text and PDFs into voice. Enables seamless conversion between audio and text formats for improved accessibility and productivity.",
+        technologies: ["React", "Next.js", "Tailwind CSS", "Python", "Firebase"],
+        link: "https://rilla-voice-ai.vercel.app/",
+        image: "/rillov.jpg",
+        category: "AI & Automation"
     },
     {
         id: 6,
-        title: "Go Digital Africa",
-        description: "Go Digital Africa is a digital marketing company that provides businesses with innovative solutions to enhance their online presence and drive growth.",
-        technologies: ["JavaScript", "React", "Tailwind", "Python", "MySQL"],
-        link: "https://godigital-africa.web.app/",
-        image: "godigital.jpg"
+        title: "AI Rate My Professor",
+        description: "An AI-driven platform that empowers students with smart, data-backed professor ratings. Uses advanced AI to provide comprehensive and accurate professor evaluations.",
+        technologies: ["JavaScript", "React", "Next.js", "Python", "MongoDB", "OpenAI API"],
+        link: "https://rate-my-professor-rag-five.vercel.app/",
+        image: "/rateprof.jpg",
+        category: "AI & Automation"
     }
-];
-const technologiesData = [
-    { category: "Frontend", name: "JavaScript", image: "/javascript.svg" },
-    { category: "Frontend", name: "React", image: "/react.svg" },
-    { category: "Frontend", name: "Tailwind CSS", image: "/tailwindcss.svg" },
-    { category: "Backend", name: "Node.js", image: "/nodejs.svg" },
-    { category: "Backend", name: "Python", image: "/python.svg" },
-    { category: "Backend", name: "Go", image: "/express.svg" },
-    { category: "Backend", name: "Django", image: "/django.svg" },
-    { category: "Database", name: "PostgreSQL", image: "/postgresql.svg" },
-    { category: "Database", name: "MongoDB", image: "/mongodb.svg" },
-    { category: "Other", name: "Git", image: "/git.svg" },
-    { category: "Other", name: "Docker", image: "/docker.svg" },
 ];
 
 const App = () => {
     const homeRef = useRef(null);
+    const aboutRef = useRef(null);
     const projectsRef = useRef(null);
     const technologiesRef = useRef(null);
     const contactRef = useRef(null);
@@ -83,24 +78,30 @@ const App = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-gray-50 overflow-x-hidden">
             <Navbar 
                 scrollToSection={scrollToSection} 
-                homeRef={homeRef} 
+                homeRef={homeRef}
+                aboutRef={aboutRef}
                 projectsRef={projectsRef} 
                 technologiesRef={technologiesRef} 
                 contactRef={contactRef}
             />
-            <section ref={homeRef} id="home" className="py-20">
-                <Hero /> {/* Hero is back! */}
-            </section>
-            <section ref={projectsRef} id="projects">
-                <Projects projects={projectsData} />
-            </section>
-            <section ref={technologiesRef} id="technologies" className="py-12 bg-gray-100">
-                <Technologies technologies={technologiesData} />
-            </section>
-            <footer ref={contactRef} id="contact">
+            <main className="relative overflow-x-hidden">
+                <section ref={homeRef} id="home" className="scroll-mt-20">
+                    <Hero />
+                </section>
+                <section ref={aboutRef} id="about" className="scroll-mt-20">
+                    <About />
+                </section>
+                <section ref={projectsRef} id="projects" className="scroll-mt-20">
+                    <Projects projects={projectsData} />
+                </section>
+                <section ref={technologiesRef} id="technologies" className="scroll-mt-20">
+                    <Technologies />
+                </section>
+            </main>
+            <footer ref={contactRef} id="contact" className="scroll-mt-20">
                 <Footer />
             </footer>
         </div>
